@@ -1,0 +1,28 @@
+.foodItem {
+  font-family: "Arial, sans-serif";
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.foodItem:hover {
+  background-color: #e0e0e0;
+}
+
+.foodItem::before {
+  content: "🍽️ ";
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.foodItem span {
+  display: block;
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
