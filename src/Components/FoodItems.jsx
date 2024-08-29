@@ -6,7 +6,11 @@ const FoodItems = ({ proFoodItem }) => {
     <>
       <ul className="list-group">
         {proFoodItem.map((items) => (
-          <Item key={items} foodItems={items}></Item>
+          <Item
+            key={items}
+            foodItems={items}
+            handleBuyButton={() => console.log(`${items} bought`)}
+          ></Item>
         ))}
       </ul>
     </>
