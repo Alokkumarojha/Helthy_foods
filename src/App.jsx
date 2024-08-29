@@ -5,6 +5,9 @@ import Container from "./Components/Container";
 import FoodInput from "./Components/FoodInput";
 
 function App() {
+  const handleOnChange = (event) => {
+    console.log(event.target.value);
+  };
   // let foodItems = [];
   let foodItems = ["Dall", "Channa", "Roati", "Pulaw", "Banana"];
   return (
@@ -16,7 +19,7 @@ function App() {
 
         <ErrorMessage proFoodItem={foodItems}></ErrorMessage>
         <FoodItems proFoodItem={foodItems}></FoodItems>
-        <FoodInput></FoodInput>
+        <FoodInput handleOnChange={handleOnChange}></FoodInput>
       </Container>
       <Container>
         <p>

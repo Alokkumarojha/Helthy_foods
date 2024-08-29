@@ -1,17 +1,10 @@
 import React from "react";
 import styles from "./Item.module.css";
-const Item = ({ foodItems }) => {
-  const handleBuyButtonClicked = (event) => {
-    console.log(event);
-    console.log(`${foodItems} being bought`);
-  };
+const Item = ({ foodItems, handleBuyButton }) => {
   return (
     <li className={styles.foodItem}>
       <span>{foodItems}</span>
-      <button
-        className={styles.foodButton}
-        onClick={(event) => handleBuyButtonClicked(event)}
-      >
+      <button className={styles.foodButton} onClick={handleBuyButton}>
         Buy
       </button>
     </li>
