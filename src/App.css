@@ -1,0 +1,50 @@
+.heading {
+  font-family: "Georgia, serif";
+  font-size: 32px;
+  color: #4caf50 !important; /* A nice green color */
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.heading span {
+  font-size: 18px;
+  color: #777;
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.food-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.heading {
+  font-family: "Georgia, serif";
+  font-size: 32px;
+  color: #4caf50 !important;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.heading span {
+  font-size: 18px;
+  color: #777 !important;
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+}
