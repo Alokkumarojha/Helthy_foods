@@ -9,7 +9,7 @@ const FoodInput = () => {
       className={styles.foodItem}
       type="text"
       placeholder="Enter food item here"
-      onChange={eventHandleOnChange}
+      onChange={(event) => eventHandleOnChange(event)}
     />
   );
 };
