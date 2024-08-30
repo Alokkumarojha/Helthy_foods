@@ -1,11 +1,9 @@
 import React from "react";
 
-const ErrorMessage = ({ proFoodItem }) => {
+const ErrorMessage = ({ items }) => {
   return (
     <>
-      {proFoodItem.length === 0 && (
-        <h1 className="display-4">I am still hungry</h1>
-      )}
+      {items.length === 0 && <h1 className="display-4">I am still hungry</h1>}
     </>
   );
 };

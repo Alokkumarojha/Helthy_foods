@@ -1,15 +1,23 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./Components/FoodItems";
 import ErrorMessage from "./Components/ErrorMessage";
 import Container from "./Components/Container";
 import FoodInput from "./Components/FoodInput";
+import { useState } from "react";
 
 function App() {
-  const handleOnChange = (event) => {
-    console.log(event.target.value);
+  const [foodItems, setFoodItems] = useState([]);
+
+  const OnKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      event.target.value = "";
+      let newItem = [...foodItems, newFoodItem];
+      setFoodItems(newItem);
+    }
   };
-  // let foodItems = [];
-  let foodItems = ["Dall", "Channa", "Roati", "Pulaw", "Banana"];
+
   return (
     <>
       <Container>
@@ -17,9 +25,10 @@ function App() {
           <span>Helthy Foods</span>
         </h1>
 
-        <ErrorMessage proFoodItem={foodItems}></ErrorMessage>
-        <FoodItems proFoodItem={foodItems}></FoodItems>
-        <FoodInput handleOnChange={handleOnChange}></FoodInput>
+        <FoodItems items={foodItems}></FoodItems>
+
+        <FoodInput handleOnKeyDown={OnKeyDown}></FoodInput>
+        <ErrorMessage items={foodItems}></ErrorMessage>
       </Container>
       <Container>
         <p>
